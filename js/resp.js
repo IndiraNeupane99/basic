@@ -8,3 +8,8 @@ burger.addEventListener('click', () => {
     rightNav.classList.toggle('v-class-resp');
     navbar.classList.toggle('h-nav-resp');
 });
+
+function scrollToServices(event) {
+    event.preventDefault();
+    document.getElementById('services').scrollIntoView({ behavior: 'smooth' });
+}
