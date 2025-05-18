@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAKWsh Hotel PLT - Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --accent: #e67e22;
+            --bg: #f4f4f4;
+            --white: #fff;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--primary);
+        }
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            background: linear-gradient(rgba(44,62,80,0.7),rgba(44,62,80,0.7)), url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            color: var(--white);
+            border-radius: 0 0 20px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+        }
+        .hero .cta {
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .hero .cta:hover {
+            background: #cf711f;
+        }
+        .sections {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 3rem 0;
+            justify-content: space-between;
+        }
+        .section {
+            background: var(--white);
+            flex: 1 1 250px;
+            min-width: 250px;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .section:hover {
+            transform: translateY(-5px) scale(1.03);
+        }
+        .section h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        .section p {
+            margin-bottom: 1.5rem;
+        }
+        .section a {
+            color: var(--primary);
+            background: var(--bg);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 500;
+            border: 1px solid var(--accent);
+            transition: background 0.2s, color 0.2s;
+        }
+        .section a:hover {
+            background: var(--accent);
+            color: var(--white);
+        }
+        footer {
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+            border-radius: 20px 20px 0 0;
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .sections {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2rem; }
+            .container { width: 98%; }
+            .nav-links { gap: 1rem; }
+            .section { padding: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">BAKWsh Hotel PLT</div>
+                <div class="nav-links">
+                    <a href="#home">Home</a>
+                    <a href="#rooms">Rooms</a>
+                    <a href="#rent">Rent</a>
+                    <a href="#about">About</a>
+                    <a href="#login">Login</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="hero" id="home">
+        <h1>Welcome to BAKWsh Hotel PLT</h1>
+        <p>Experience luxury and comfort in the heart of the city. Book your stay with us today!</p>
+        <a href="#rooms" class="cta">View Rooms</a>
+    </section>
+    <div class="container">
+        <div class="sections">
+            <div class="section" id="rooms">
+                <h2>Rooms</h2>
+                <p>Choose from a variety of elegant rooms designed for your comfort and relaxation.</p>
+                <a href="#rooms">Explore Rooms</a>
+            </div>
+            <div class="section" id="rent">
+                <h2>Rent</h2>
+                <p>Flexible rental options for events, meetings, and long-term stays at competitive rates.</p>
+                <a href="#rent">See Rental Options</a>
+            </div>
+            <div class="section" id="about">
+                <h2>About Us</h2>
+                <p>Learn more about BAKWsh Hotel PLT, our story, and our commitment to hospitality excellence.</p>
+                <a href="#about">Read More</a>
+            </div>
+            <div class="section" id="login">
+                <h2>Login</h2>
+                <p>Access your account to manage bookings and view exclusive offers.</p>
+                <a href="#login" onclick="document.getElementById('login-modal').style.display='block';return false;">Login Now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Simple Login Modal -->
+    <div id="login-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(44,62,80,0.7);z-index:1000;align-items:center;justify-content:center;">
+        <div style="background:#fff;padding:2rem 1.5rem;border-radius:10px;max-width:350px;margin:auto;position:relative;">
+            <h2 style="margin-bottom:1rem;color:#e67e22;">Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required style="width:100%;padding:0.7rem;margin-bottom:1rem;border-radius:5px;border:1px solid #ccc;">
+                <input type="password" placeholder="Password" required style="width:100%;padding:0.7rem;margin-bottom:1rem;border-radius:5px;border:1px solid #ccc;">
+                <button type="submit" style="width:100%;background:#e67e22;color:#fff;padding:0.7rem;border:none;border-radius:5px;font-size:1rem;">Login</button>
+            </form>
+            <button onclick="document.getElementById('login-modal').style.display='none';" style="position:absolute;top:10px;right:10px;background:none;border:none;font-size:1.2rem;cursor:pointer;">&times;</button>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 BAKWsh Hotel PLT. All rights reserved.
+    </footer>
+    <script>
+        // Close modal on outside click
+        window.onclick = function(event) {
+            var modal = document.getElementById('login-modal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
